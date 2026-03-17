@@ -1,0 +1,92 @@
+/* ── DAVA Design Custom Styles ── */
+
+/* Scrollbar */
+.dava-site ::-webkit-scrollbar { width: 6px; }
+.dava-site ::-webkit-scrollbar-track { background: #F7F6F3; }
+.dava-site ::-webkit-scrollbar-thumb { background: #D4C4A8; border-radius: 3px; }
+
+/* Selection */
+.dava-site ::selection { background: #C4A882; color: #FFFFFF; }
+
+/* Reveal animations */
+.dava-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.dava-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dava-reveal-delay-1 { transition-delay: 0.1s; }
+.dava-reveal-delay-2 { transition-delay: 0.2s; }
+.dava-reveal-delay-3 { transition-delay: 0.3s; }
+.dava-reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Hero overlay */
+.dava-hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+/* CTA overlay */
+.dava-cta-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+}
+
+/* Process step left border dot */
+.dava-process-step::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #C8BEB5;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dava-process-step:hover::before {
+    background: #C4A882;
+}
+
+/* Nav link underline effect */
+.dava-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: #2D2D2D;
+    transition: width 0.3s ease;
+}
+
+.dava-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dark hero nav link underline */
+.dava-dark-hero .dava-nav-link::after {
+    background: #FFFFFF;
+}
+
+/* About values bullet */
+.dava-value-bullet::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8D8989;
+    flex-shrink: 0;
+}
