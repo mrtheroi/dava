@@ -32,7 +32,6 @@ export default function CtaBand({ image, title, subtitle, ctaText, ctaHref }: Ct
                     </a>
                 </div>
             </div>
-            <hr className="mx-auto mt-10 max-w-[1100px] border-t border-[#E8E5E0]" />
         </section>
     );
 }
