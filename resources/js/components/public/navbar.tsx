@@ -24,15 +24,15 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
     const linkColor = darkHero && !scrolled ? 'text-white/85 hover:text-white' : 'text-[#8D8989] hover:text-[#2D2D2D]';
     const btnBorder = darkHero && !scrolled ? 'border-white text-white hover:bg-white hover:text-[#2D2D2D]' : 'border-[#2D2D2D] text-[#2D2D2D] hover:bg-[#2D2D2D] hover:text-white';
     const hamburgerColor = darkHero && !scrolled ? 'bg-white' : 'bg-[#2D2D2D]';
-    const logoFilter = darkHero && !scrolled ? 'brightness-0 invert' : 'brightness-[0.3]';
+    const logoFilter = darkHero && !scrolled ? 'brightness(0) invert(1)' : 'brightness(0.3)';
 
     return (
         <>
             <nav
                 className={`fixed top-0 right-0 left-0 z-[1000] flex items-center justify-between transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                     scrolled
-                        ? 'bg-white/95 px-12 py-[18px] shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
-                        : 'mt-[52px] px-12'
+                        ? 'mt-0 bg-white/95 px-12 py-[18px] shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
+                        : 'mt-[52px] px-12 py-[18px]'
                 }`}
             >
                 <Link href="/" className="flex items-center gap-2.5 no-underline">
