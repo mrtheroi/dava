@@ -31,8 +31,8 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
             <nav
                 className={`fixed top-0 right-0 left-0 z-[1000] flex items-center justify-between transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                     scrolled
-                        ? 'mt-0 bg-white/95 px-12 py-[18px] shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
-                        : 'mt-[52px] px-12 py-[18px]'
+                        ? 'bg-white/95 px-12 shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
+                        : 'mt-[52px] px-12'
                 }`}
             >
                 <Link href="/" className="flex items-center gap-2.5 no-underline">
@@ -44,7 +44,7 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
                     />
                 </Link>
 
-                <div className="hidden h-[56px] w-[426px] items-center justify-end gap-9 lg:flex">
+                <div className="hidden min-h-[56px] w-[426px] items-center justify-end gap-9 lg:flex">
                     {[
                         { href: '/servicios', label: 'Servicios' },
                         { href: '/nosotros', label: 'Nosotros' },
