@@ -78,7 +78,7 @@ export default function Servicios({ images }: Props) {
             {/* Accesorios y Decoración */}
             <section className="bg-white px-12 py-[100px] max-[992px]:px-8 max-[992px]:py-[72px] max-md:px-5 max-md:py-14">
                 <div className="dava-reveal mx-auto grid max-w-[1200px] grid-cols-2 items-center gap-[60px] max-[992px]:grid-cols-1 max-[992px]:gap-10">
-                    <div className="order-1 aspect-[4/3] overflow-hidden rounded-2xl max-[992px]:order-none">
+                    <div className="aspect-[4/3] overflow-hidden rounded-2xl">
                         <SiteImage image={getImage(images, 'services_decor')} className="block h-full w-full object-cover transition-transform duration-600 ease-out hover:scale-[1.03]" />
                     </div>
                     <div>
@@ -91,7 +91,7 @@ export default function Servicios({ images }: Props) {
                     </div>
 
                     {/* Tags */}
-                    <div className="order-2 col-span-full mt-12 grid grid-cols-4 gap-y-6 max-[992px]:order-none max-[992px]:grid-cols-2 max-[992px]:gap-y-5">
+                    <div className="col-span-full mt-12 grid grid-cols-4 gap-y-6 max-[992px]:grid-cols-2 max-[992px]:gap-y-5">
                         {decorTags.map((tag) => (
                             <div
                                 key={tag.label}

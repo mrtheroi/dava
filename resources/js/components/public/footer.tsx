@@ -3,7 +3,6 @@ import { Link } from '@inertiajs/react';
 export default function Footer() {
     return (
         <footer className="bg-white px-12 pb-8 max-md:px-5">
-            <hr className="mb-6 border-t border-[#E6E6E6]" />
             <div className="mx-auto grid max-w-[1200px] grid-cols-[2fr_1fr_1fr] items-start gap-12 max-[992px]:grid-cols-2 max-md:grid-cols-1 max-md:gap-8">
                 {/* Brand */}
                 <div>
@@ -11,7 +10,7 @@ export default function Footer() {
                         <img
                             src="/images/dava-logo-footer.svg"
                             alt="DAVA Design"
-                            className="h-[57px]"
+                            className="h-[57px] w-[256px]"
                         />
                     </Link>
                     <p className="mt-6 font-[Montserrat] text-base font-normal leading-6 text-[#8D8989]">
