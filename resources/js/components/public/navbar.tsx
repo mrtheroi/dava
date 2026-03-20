@@ -29,22 +29,22 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
     return (
         <>
             <nav
-                className={`fixed top-0 right-0 left-0 z-[1000] flex items-center justify-between transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                className={`fixed top-0 right-0 left-0 z-[1000] flex h-[108px] items-end justify-between px-12 pt-[56px] transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] max-md:px-5 ${
                     scrolled
-                        ? 'bg-white/95 px-12 shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
-                        : 'mt-[52px] px-12'
+                        ? 'border-b border-[#E8E5E0] bg-white/95 pb-3 shadow-[0_1px_20px_rgba(0,0,0,0.06)] backdrop-blur-[20px]'
+                        : ''
                 }`}
             >
-                <Link href="/" className="flex items-center gap-2.5 no-underline">
+                <Link href="/" className="mb-1 flex items-center no-underline">
                     <img
-                        src="/images/dava-logo.png"
+                        src={scrolled ? '/images/dava-logo-footer.svg' : '/images/dava-logo.png'}
                         alt="DAVA Design"
-                        className={`h-[90px] w-auto object-contain transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${scrolled ? '!h-[70px]' : ''}`}
-                        style={{ filter: scrolled ? 'brightness(0.3)' : logoFilter }}
+                        className="h-[43.83px] w-[41.36px] object-contain transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                        style={{ filter: scrolled ? undefined : logoFilter }}
                     />
                 </Link>
 
-                <div className="hidden min-h-[56px] w-[426px] items-center justify-end gap-9 lg:flex">
+                <div className="hidden h-[52px] w-[426px] items-center justify-end gap-12 lg:flex">
                     {[
                         { href: '/servicios', label: 'Servicios' },
                         { href: '/nosotros', label: 'Nosotros' },
@@ -52,16 +52,16 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
                         <Link
                             key={href}
                             href={href}
-                            className={`dava-nav-link relative font-[Montserrat] text-xl font-semibold leading-[30px] no-underline transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${linkColor} ${isActive(href) ? '!text-[#2D2D2D]' : ''} ${darkHero && !scrolled ? 'dava-dark-hero' : ''}`}
+                            className={`dava-nav-link relative font-[Montserrat] text-xl font-semibold leading-[30px] no-underline transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${linkColor} ${isActive(href) ? (darkHero && !scrolled ? '!text-white' : '!text-[#2D2D2D]') : ''} ${darkHero && !scrolled ? 'dava-dark-hero' : ''}`}
                         >
                             {label}
                         </Link>
                     ))}
                     <Link
                         href="/contacto"
-                        className={`rounded-md border-[1.5px] px-[22px] py-2 font-[Montserrat] text-base font-black uppercase leading-6 no-underline transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${btnBorder}`}
+                        className={`rounded-lg border-[1.5px] px-6 py-3.5 font-[Montserrat] text-base font-black uppercase leading-6 no-underline transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${btnBorder}`}
                     >
-                        Contáctanos
+                        Contacto
                     </Link>
                 </div>
 
