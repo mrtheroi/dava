@@ -13,7 +13,7 @@ export default function HeroSection({ image, title, subtitle, ctaText, ctaHref }
 
     return (
         <section
-            className="dava-hero-overlay relative flex min-h-[60vh] items-center justify-center overflow-hidden pt-[100px] text-center"
+            className="dava-hero-overlay relative mx-auto flex aspect-[1442/720] w-full max-w-[1442px] items-center justify-center overflow-hidden pt-[100px] text-center"
             style={bgImage ? { background: `url('${bgImage}') center/cover no-repeat` } : { background: '#555555' }}
         >
             <div className="relative z-[2] flex max-w-[844px] flex-col items-center gap-10">

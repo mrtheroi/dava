@@ -37,9 +37,9 @@ export default function Navbar({ darkHero = false }: NavbarProps) {
             >
                 <Link href="/" className="mb-1 flex items-center no-underline">
                     <img
-                        src={scrolled ? '/images/dava-logo-footer.svg' : '/images/dava-logo.png'}
+                        src="/images/dava-logo-footer.svg"
                         alt="DAVA Design"
-                        className="h-[43.83px] w-[41.36px] object-contain transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                        className="h-[45px] w-auto object-contain transition-all duration-350 ease-[cubic-bezier(0.4,0,0.2,1)]"
                         style={{ filter: scrolled ? undefined : logoFilter }}
                     />
                 </Link>
